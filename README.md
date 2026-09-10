@@ -2,7 +2,7 @@
 
 Desktop companion for [ThermalTrace](https://thermaltrace.dev) — glanceable freeze & flood moods for one garage, workshop, or cabin space.
 
-**Not a second dashboard.** Devices, alerts, history, and claims stay on thermaltrace.dev. Bay Buddy shows the vibe: cozy, drafty, shiver, panic, offline, or hero.
+**Not a second dashboard.** Devices, alerts, history, and claims stay on thermaltrace.dev (live probe cards at [`/dashboard/live`](https://thermaltrace.dev/dashboard/live); Overview Status/Insights at [`/dashboard`](https://thermaltrace.dev/dashboard)). Bay Buddy shows the vibe: cozy, drafty, shiver, panic, offline, or hero.
 
 ## Connect flow
 
