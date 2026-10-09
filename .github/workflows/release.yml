@@ -56,6 +56,8 @@ jobs:
           # Avoid FUSE failures when linuxdeploy runs nested AppImages on CI/hosts without user namespaces
           APPIMAGE_EXTRACT_AND_RUN: "1"
         with:
+          # pnpm-lock.yaml makes tauri-action pick pnpm, which this job doesn't install.
+          tauriScript: npm run tauri
           tagName: ${{ github.ref_name }}
           releaseName: "Bay Buddy ${{ github.ref_name }}"
           releaseBody: |
