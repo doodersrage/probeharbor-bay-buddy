@@ -1,7 +1,7 @@
 {
   "name": "bay-buddy",
   "private": true,
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Bay Buddy — ProbeHarbor desktop companion",
   "type": "module",
   "scripts": {
