@@ -1,28 +1,28 @@
 # Bay Buddy
 
-Desktop companion for [ThermalTrace](https://thermaltrace.dev) — glanceable freeze & flood moods for one garage, workshop, or cabin space.
+Desktop companion for [ProbeHarbor](https://probeharbor.dev) — glanceable freeze & flood moods for one garage, workshop, or cabin space.
 
-**Not a second dashboard.** Devices, alerts, history, and claims stay on thermaltrace.dev (live probe cards at [`/dashboard/live`](https://thermaltrace.dev/dashboard/live); Overview Status/Insights at [`/dashboard`](https://thermaltrace.dev/dashboard)). Bay Buddy shows the vibe: cozy, drafty, shiver, panic, offline, or hero.
+**Not a second dashboard.** Devices, alerts, history, and claims stay on probeharbor.dev (live probe cards at [`/dashboard/live`](https://probeharbor.dev/dashboard/live); Overview Status/Insights at [`/dashboard`](https://probeharbor.dev/dashboard)). Bay Buddy shows the vibe: cozy, drafty, shiver, panic, offline, or hero.
 
 ## Connect flow
 
 1. Click **Connect with Google / GitHub / email**
-2. Sign in on thermaltrace.dev in your browser
+2. Sign in on probeharbor.dev in your browser
 3. The browser returns to a localhost handoff Bay Buddy is listening on
 4. Live probe / freeze margin / time-to-freeze / door / leak moods replace demo data
 
-Requires ThermalTrace server support for `/api/auth/companion/start` (deployed with the companion auth changes).
+Requires ProbeHarbor server support for `/api/auth/companion/start` (deployed with the companion auth changes).
 
 ## Claim puck
 
-When connected, Bay Buddy can claim a [claim-puck](https://github.com/doodersrage/thermaltrace-claim-puck) (RP2040-Zero):
+When connected, Bay Buddy can claim a [claim-puck](https://github.com/doodersrage/probeharbor-claim-puck) (RP2040-Zero):
 
 1. Flash claim-puck CircuitPython firmware and wire **GP4 → GND** button
 2. Plug the puck into USB
 3. **Rescan ports** → **Claim this bay** → press the puck button when the LED turns yellow
 4. Optionally **Drive puck mood** to push live `GET /api/bays/{bay}/mood` onto the LED
 
-Requires the ThermalTrace claim-puck API + Supabase `pucks` migration.
+Requires the ProbeHarbor claim-puck API + Supabase `pucks` migration.
 
 ## Platforms
 
@@ -68,4 +68,4 @@ git push origin v0.2.0
 
 ## License
 
-MIT — companion to the ThermalTrace project.
+MIT — companion to the ProbeHarbor project.

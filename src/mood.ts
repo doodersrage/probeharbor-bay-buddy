@@ -43,7 +43,7 @@ export function captionFor(mood: Mood): string {
   return options[Math.floor(Math.random() * options.length)] ?? mood;
 }
 
-/** Demo state when ThermalTrace isn’t connected yet. */
+/** Demo state when ProbeHarbor isn’t connected yet. */
 export function demoBuddyState(tick = 0): BuddyState {
   const scenes: Array<Omit<BuddyState, "mood" | "caption" | "lastUpdated">> = [
     {

@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap");
 
 :root {
-  --bg: #090b0f;
-  --surface: #151b24;
-  --surface-2: #1c2430;
+  --bg: #07111a;
+  --surface: #0f1f2c;
+  --surface-2: #142a3a;
   --text: #f3f6fb;
-  --muted: #9aa6b8;
+  --muted: #8aa0af;
   --accent: #3b82f6;
-  --thermal: #e85500;
-  --thermal-soft: #ff9e4a;
+  /* ProbeHarbor teal for chrome; the buddy's cozy face stays warm (see .buddy-face). */
+  --thermal: #22b8d4;
+  --thermal-soft: #67d3e6;
+  --buddy-warm: #e85500;
+  --buddy-warm-soft: #ff9e4a;
   --ok: #3ecf8e;
   --danger: #ff5c6c;
   --radius: 18px;
@@ -30,7 +33,7 @@ body {
   margin: 0;
   min-height: 100%;
   background:
-    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(232, 85, 0, 0.22), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(34, 184, 212, 0.22), transparent 55%),
     radial-gradient(ellipse 70% 50% at 100% 100%, rgba(59, 130, 246, 0.12), transparent 50%),
     var(--bg);
   color: var(--text);
@@ -78,7 +81,7 @@ body {
   position: relative;
   border-radius: calc(var(--radius) + 6px);
   background:
-    linear-gradient(160deg, rgba(232, 85, 0, 0.18), transparent 45%),
+    linear-gradient(160deg, rgba(34, 184, 212, 0.18), transparent 45%),
     var(--surface);
   border: 1px solid rgba(255, 158, 74, 0.18);
   padding: 1.5rem 1.25rem 1.25rem;
@@ -108,7 +111,7 @@ body {
   height: 140px;
   margin: 0 auto 1rem;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, var(--thermal-soft), var(--thermal) 55%, #8a2e00);
+  background: radial-gradient(circle at 35% 30%, var(--buddy-warm-soft), var(--buddy-warm) 55%, #8a2e00);
   display: grid;
   place-items: center;
   box-shadow: 0 0 40px rgba(232, 85, 0, 0.35);
@@ -261,7 +264,7 @@ button:active,
 
 .btn-primary {
   background: linear-gradient(135deg, var(--thermal), var(--thermal-soft));
-  color: #1a0a00;
+  color: #03202e;
 }
 
 .btn-secondary {
@@ -409,7 +412,7 @@ section h2 {
 
 .kind-freeze {
   background: rgba(232, 85, 0, 0.2);
-  color: var(--thermal-soft);
+  color: var(--buddy-warm-soft);
 }
 
 .footer-note {

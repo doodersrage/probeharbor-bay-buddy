@@ -59,13 +59,13 @@ jobs:
           tagName: ${{ github.ref_name }}
           releaseName: "Bay Buddy ${{ github.ref_name }}"
           releaseBody: |
-            Desktop companion for ThermalTrace.
+            Desktop companion for ProbeHarbor.
 
             - **Linux:** AppImage, deb, rpm
             - **Windows:** MSI / NSIS
             - **macOS:** DMG (Intel + Apple Silicon)
 
-            Demo moods work offline; connect opens thermaltrace.dev.
+            Demo moods work offline; connect opens probeharbor.dev.
           releaseDraft: false
           prerelease: false
           args: ${{ matrix.args }}

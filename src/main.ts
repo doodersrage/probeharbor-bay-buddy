@@ -2,8 +2,8 @@ import { invoke } from "@tauri-apps/api/core";
 import { DEMO_NEAR_MISSES, captionFor, demoBuddyState, resolveMood } from "./mood";
 import type { BuddyState, NearMiss } from "./types";
 
-const THERMALTRACE_URL = "https://thermaltrace.dev";
-const ALERTS_URL = "https://thermaltrace.dev/dashboard/alerts";
+const THERMALTRACE_URL = "https://probeharbor.dev";
+const ALERTS_URL = "https://probeharbor.dev/dashboard/alerts";
 
 interface LiveBuddyPayload {
   connected: boolean;
@@ -361,14 +361,14 @@ function renderPuckSection(): string {
 }
 
 function render(app: HTMLElement) {
-  const connectedLabel = state.connected ? "Linked to ThermalTrace" : "Demo mode";
+  const connectedLabel = state.connected ? "Linked to ProbeHarbor" : "Demo mode";
 
   app.innerHTML = `
     <header>
       <div class="brand" aria-label="Bay Buddy">
         <span class="bay">Bay</span><span class="buddy">Buddy</span>
       </div>
-      <p class="brand-sub">Companion for ThermalTrace freeze &amp; flood watches</p>
+      <p class="brand-sub">Companion for ProbeHarbor freeze &amp; flood watches</p>
       <div class="status-pill" data-connected="${state.connected}" style="margin-top:0.65rem">
         <span class="dot" aria-hidden="true"></span>
         ${connectedLabel}
@@ -412,13 +412,13 @@ function render(app: HTMLElement) {
           Refresh live mood
         </button>
         <button type="button" class="btn-secondary" id="btn-alerts">
-          Alert settings on thermaltrace.dev
+          Alert settings on probeharbor.dev
         </button>
         <button type="button" class="btn-ghost" id="btn-disconnect">
           Disconnect
         </button>`
           : `
-        <p class="connect-hint">Sign in to ThermalTrace — we’ll open your browser, then return here with live readings.</p>
+        <p class="connect-hint">Sign in to ProbeHarbor — we’ll open your browser, then return here with live readings.</p>
         <button type="button" class="btn-primary" id="btn-google" ${connecting ? "disabled" : ""}>
           Connect with Google
         </button>
@@ -454,7 +454,7 @@ function render(app: HTMLElement) {
 
     <p class="footer-note">
       Bay Buddy is a glanceable companion. Devices, alerts, and history stay on
-      <a href="${THERMALTRACE_URL}" id="link-tt">thermaltrace.dev</a>.
+      <a href="${THERMALTRACE_URL}" id="link-tt">probeharbor.dev</a>.
       Claim puck binds a physical presence key to this bay.
     </p>
   `;
@@ -507,7 +507,7 @@ window.addEventListener("DOMContentLoaded", () => {
   void (async () => {
     const hasSession = await invoke<boolean>("has_companion_session");
     if (hasSession) {
-      statusMessage = "Restoring ThermalTrace session…";
+      statusMessage = "Restoring ProbeHarbor session…";
       render(app);
       await refreshLive(app, false);
       if (state.connected) {

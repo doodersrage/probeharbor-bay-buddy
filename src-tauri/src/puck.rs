@@ -1,4 +1,4 @@
-//! Claim-puck serial + ThermalTrace claim/follow helpers.
+//! Claim-puck serial + ProbeHarbor claim/follow helpers.
 
 use std::io::{Read, Write};
 use std::time::{Duration, Instant};

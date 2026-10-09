@@ -10,7 +10,7 @@ use tauri::{AppHandle, Emitter, Manager};
 
 use crate::open_url::open_https_url;
 
-const API_BASE: &str = "https://thermaltrace.dev";
+const API_BASE: &str = "https://probeharbor.dev";
 const STALE_AFTER_SECS: u64 = 30 * 60;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -253,7 +253,7 @@ async fn exchange_token(exchange: &str) -> Result<SessionTokens, String> {
     })
 }
 
-/// Open ThermalTrace companion sign-in and wait for the loopback handoff.
+/// Open ProbeHarbor companion sign-in and wait for the loopback handoff.
 #[tauri::command]
 pub async fn start_companion_login(
     app: AppHandle,
@@ -399,12 +399,12 @@ async fn api_json<T: for<'de> Deserialize<'de>, B: Serialize>(
         let body = res.text().await.unwrap_or_default();
         if body.contains("MFA required") {
             return Err(
-                "MFA required — finish MFA in the browser on thermaltrace.dev, then connect again"
+                "MFA required — finish MFA in the browser on probeharbor.dev, then connect again"
                     .into(),
             );
         }
         return Err(format!(
-            "Session rejected by ThermalTrace (HTTP 401). access_len={} refresh_len={} body={}",
+            "Session rejected by ProbeHarbor (HTTP 401). access_len={} refresh_len={} body={}",
             tokens.access_token.len(),
             tokens.refresh_token.len(),
             body.chars().take(180).collect::<String>()

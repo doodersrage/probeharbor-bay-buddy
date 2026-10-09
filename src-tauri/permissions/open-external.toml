@@ -5,12 +5,12 @@ commands.allow = ["open_external"]
 
 [[permission]]
 identifier = "allow-start-companion-login"
-description = "Start ThermalTrace companion OAuth via localhost loopback"
+description = "Start ProbeHarbor companion OAuth via localhost loopback"
 commands.allow = ["start_companion_login"]
 
 [[permission]]
 identifier = "allow-disconnect-companion"
-description = "Clear stored ThermalTrace companion session"
+description = "Clear stored ProbeHarbor companion session"
 commands.allow = ["disconnect_companion"]
 
 [[permission]]
@@ -20,7 +20,7 @@ commands.allow = ["has_companion_session"]
 
 [[permission]]
 identifier = "allow-fetch-buddy-state"
-description = "Fetch live buddy state from ThermalTrace APIs"
+description = "Fetch live buddy state from ProbeHarbor APIs"
 commands.allow = ["fetch_buddy_state"]
 
 [[permission]]
@@ -35,7 +35,7 @@ commands.allow = ["puck_info"]
 
 [[permission]]
 identifier = "allow-claim-puck"
-description = "Provision/register/claim a ThermalTrace claim puck"
+description = "Provision/register/claim a ProbeHarbor claim puck"
 commands.allow = ["claim_puck"]
 
 [[permission]]
@@ -45,5 +45,5 @@ commands.allow = ["push_puck_mood"]
 
 [[permission]]
 identifier = "allow-fetch-bay-mood"
-description = "Fetch derived bay mood from ThermalTrace"
+description = "Fetch derived bay mood from ProbeHarbor"
 commands.allow = ["fetch_bay_mood"]

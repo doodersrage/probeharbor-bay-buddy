@@ -1,8 +1,8 @@
 [package]
 name = "bay-buddy"
 version = "0.2.2"
-description = "Bay Buddy — ThermalTrace desktop companion for freeze & flood vibes"
-authors = ["ThermalTrace"]
+description = "Bay Buddy — ProbeHarbor desktop companion for freeze & flood vibes"
+authors = ["ProbeHarbor"]
 edition = "2021"
 license = "MIT"
 
